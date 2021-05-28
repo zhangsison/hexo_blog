@@ -1,0 +1,1641 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="XSS, 迪拜de天空-触手可及的天空之城关,迪拜de天空,迪拜,迪拜的天空,迪拜旅游,迪拜塔,dibai,迪拜de天空技术博客,迪拜时间,Dubai,迪拜人,迪拜世界,天空之城,迪拜学习分享">
+    <meta name="description" content="迪拜de天空-触手可及的天空之城一生至少该有一次，为了某个人而忘了自己，不求有结果，不求同行，不求曾经拥有，甚至不求你爱我，只求在我最美的年华里，遇到你...">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>XSS | 迪拜de天空-触手可及的天空之城</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="迪拜de天空-触手可及的天空之城" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">迪拜de天空</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">迪拜de天空-触手可及的天空之城</div>
+        <div class="logo-desc">
+            
+            迪拜de天空-触手可及的天空之城一生至少该有一次，为了某个人而忘了自己，不求有结果，不求同行，不求曾经拥有，甚至不求你爱我，只求在我最美的年华里，遇到你...
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+				<i class="fas fa-fw fa-link"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+				<i class="fas fa-fw fa-link"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+				<i class="fas fa-fw fa-link"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+				<i class="fas fa-fw fa-link"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+				<i class="fas fa-fw fa-link"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">XSS</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #5694f8;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/XSS/">
+                                <span class="chip bg-color">XSS</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/web/" class="post-category">
+                                web
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-12-06
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="XSS"><a href="#XSS" class="headerlink" title="XSS"></a>XSS</h2><p>当浏览器请求 <a target="_blank" rel="noopener" href="http://xxx/search?keyword=&quot;">http://xxx/search?keyword=&quot;</a></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>script<span class="token operator">></span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'XSS'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span> 
+时，服务端会解析出请求参数 keyword，得到 "
+<span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> <span class="token operator">&lt;</span>script<span class="token operator">></span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'XSS'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p> 拼接到 HTML 中返回给浏览器。形成了如下的 HTML：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> value<span class="token operator">=</span><span class="token string">""</span> <span class="token operator">&lt;</span>script<span class="token operator">></span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'XSS'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>"
+<span class="token operator">&lt;</span>button<span class="token operator">~</span>搜索<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+<span class="token operator">&lt;</span>div<span class="token operator">></span>
+您搜索的关键词是："<span class="token operator">&lt;</span>script<span class="token operator">></span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'XSS'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+
+<span class="token operator">&lt;</span>input type<span class="token operator">=</span><span class="token string">"text"</span> value<span class="token operator">=</span><span class="token string">"&lt;%= escapeHTML(getParameter("</span>keyword<span class="token string">")) %"</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>button<span class="token operator">~</span>搜索<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+<span class="token operator">&lt;</span>div<span class="token operator">></span>
+您搜索的关键词是：<span class="token operator">&lt;</span><span class="token operator">%=</span> <span class="token function">escapeHTML</span><span class="token punctuation">(</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"keyword"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">%</span><span class="token operator">></span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>escapeHTML()</strong></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>xxx<span class="token operator">/</span><span class="token operator">?</span>redirect_to<span class="token operator">=</span>javascript<span class="token operator">:</span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'XSS'</span><span class="token punctuation">)</span>
+<span class="token comment">// 禁止 URL 以 "javascript:" 开头</span>
+xss <span class="token operator">=</span> <span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"redirect_to"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">startsWith</span><span class="token punctuation">(</span><span class="token string">'javascript:'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>xss<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"~%= escapeHTML(getParameter("</span>redirect_to<span class="token string">"))%~"</span><span class="token operator">></span>
+	跳转<span class="token operator">...</span>
+	<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+	<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"/404"</span><span class="token operator">~</span>
+	跳转<span class="token operator">...</span>
+	<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token comment">// 根据项目情况进行过滤，禁止掉 "javascript:" 链接、非法 scheme 等</span>
+allowSchemes <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"http"</span><span class="token punctuation">,</span> <span class="token string">"https"</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+valid <span class="token operator">=</span> <span class="token function">isValid</span><span class="token punctuation">(</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"redirect_to"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> allowSchemes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>valid<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+	<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"~%= escapeHTML(getParameter("</span>redirect_to<span class="token string">"))%>"</span><span class="token operator">></span>
+	跳转<span class="token operator">...</span>
+	<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+<span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+	<span class="token operator">&lt;</span>a href<span class="token operator">=</span><span class="token string">"/404"</span><span class="token operator">></span>
+	跳转<span class="token operator">...</span>
+	<span class="token operator">&lt;</span><span class="token operator">/</span>a<span class="token operator">></span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p> 插入 JSON 的地方不能使用 escapeHTML()，因为转义 “ 后，JSON 格式会被破坏。</p>
+<pre class="line-numbers language-none"><code class="language-none">var initData &#x3D; &lt; escapeEmbedJSON(data.toJSON()) &#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>DOM 型 XSS 攻击，实际上就是网站前端 JavaScript 代码本身不够严谨，把不可信的数据当作代码执行了。</p>
+<p>在使用 .innerHTML、.outerHTML、document.write() 时要特别小心，不要把不可信的数据作为 HTML 插到页面上，而应尽量使用 .textContent、.setAttribute() 等。</p>
+<p>如果用 Vue/React 技术栈，并且不使用 v-html/dangerouslySetInnerHTML 功能，就在前端 render 阶段避免 innerHTML、outerHTML 的 XSS 隐患。</p>
+<p>DOM 中的内联事件监听器，如 location、onclick、onerror、onload、onmouseover 等，<del>a</del> 标签的 href 属性，JavaScript 的 eval()、setTimeout()、setInterval() 等，都能把字符串作为代码运行。如果不可信的数据拼接到字符串中传递给这些 API，很容易产生安全隐患，请务必避免。</p>
+<blockquote>
+<p>XSS攻击可以分为3类：反射型（非持久型）、存储型（持久型）、基于DOM。</p>
+</blockquote>
+<p><strong>反射型</strong></p>
+<p>反射型 XSS 只是简单地把用户输入的数据 “反射” 给浏览器，这种攻击方式往往需要攻击者诱使用户点击一个恶意链接，或者提交一个表单，或者进入一个恶意网站时，注入脚本进入被攻击者的网站。</p>
+<p>看一个示例。我先准备一个如下的静态页：</p>
+<p><img src="https://user-images.githubusercontent.com/7871813/42720000-30a9b93a-8752-11e8-879b-edd8519f4e3e.png"></p>
+<p>恶意链接的地址指向了 localhost:8001/?q=111&amp;p=222。然后，我再启一个简单的 Node 服务处理恶意链接的请求：</p>
+<pre class="line-numbers language-none"><code class="language-none">const http &#x3D; require(&#39;http&#39;);
+function handleReequest(req, res) &#123;
+res.setHeader(&#39;Access-Control-Allow-Origin&#39;, &#39;*&#39;);
+res.writeHead(200, &#123;&#39;Content-Type&#39;: &#39;text&#x2F;html; charset&#x3D;UTF-8&#39;&#125;);
+res.write(&#39;&lt;script&gt;alert(&quot;反射型 XSS 攻击&quot;)&lt;&#x2F;script&gt;&#39;);
+res.end();
+&#125;
+
+const server &#x3D; new http.Server();
+server.listen(8001, &#39;127.0.0.1&#39;);
+server.on(&#39;request&#39;, handleReequest);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>当用户点击恶意链接时，页面跳转到攻击者预先准备的页面，会发现在攻击者的页面执行了 js 脚本：</p>
+<pre class="line-numbers language-none"><code class="language-none">http:&#x2F;&#x2F;weibo.com&#x2F;login.php?&#39;u&#x3D;1931138954&#39;&lt;script&gt;alert(&#x2F;ssss&#x2F;)&lt;&#x2F;script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>使用标签iframe.</p>
+<pre class="line-numbers language-none"><code class="language-none">http:&#x2F;&#x2F;weibo.com&#x2F;login.php?&#39;u&#x3D;1931138954&#39;&lt;iframe src&#x3D;&#39;http:&#x2F;&#x2F;www.baidu.com&#39;&#x2F;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>存储型</strong></p>
+<p>存储型 XSS 会把用户输入的数据 “存储” 在服务器端，当浏览器请求数据时，脚本从服务器上传回并执行。这种 XSS 攻击具有很强的稳定性。</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;input&quot;&gt;
+&lt;button id&#x3D;&quot;btn&quot;&gt;Submit&lt;&#x2F;button&gt;
+	&lt;script&gt;
+	    const input &#x3D; document.getElementById(&#39;input&#39;);
+	    const btn &#x3D; document.getElementById(&#39;btn&#39;);
+	
+	    let val;
+	     
+	    input.addEventListener(&#39;change&#39;, (e) &#x3D;&gt; &#123;
+	        val &#x3D; e.target.value;
+	    &#125;, false);
+	
+	    btn.addEventListener(&#39;click&#39;, (e) &#x3D;&gt; &#123;
+	        fetch(&#39;http:&#x2F;&#x2F;localhost:8001&#x2F;save&#39;, &#123;
+	            method: &#39;POST&#39;,
+	            body: val
+	        &#125;);
+	    &#125;, false);
+	&lt;&#x2F;script&gt;     
+
+启动一个 Node 服务监听 save 请求。为了简化，用一个变量来保存用户的输入：
+
+const http &#x3D; require(&#39;http&#39;);
+
+let userInput &#x3D; &#39;&#39;;
+
+function handleReequest(req, res) &#123;
+    const method &#x3D; req.method;
+    res.setHeader(&#39;Access-Control-Allow-Origin&#39;, &#39;*&#39;);
+    res.setHeader(&#39;Access-Control-Allow-Headers&#39;, &#39;Content-Type&#39;)
+    
+    if (method &#x3D;&#x3D;&#x3D; &#39;POST&#39; &amp;&amp; req.url &#x3D;&#x3D;&#x3D; &#39;&#x2F;save&#39;) &#123;
+        let body &#x3D; &#39;&#39;;
+        req.on(&#39;data&#39;, chunk &#x3D;&gt; &#123;
+            body +&#x3D; chunk;
+        &#125;);
+
+        req.on(&#39;end&#39;, () &#x3D;&gt; &#123;
+            if (body) &#123;
+                userInput &#x3D; body;
+            &#125;
+            res.end();
+        &#125;);
+    &#125; else &#123;
+        res.writeHead(200, &#123;&#39;Content-Type&#39;: &#39;text&#x2F;html; charset&#x3D;UTF-8&#39;&#125;);
+        res.write(userInput);
+        res.end();
+    &#125;
+&#125;
+
+const server &#x3D; new http.Server();
+server.listen(8001, &#39;127.0.0.1&#39;);
+
+server.on(&#39;request&#39;, handleReequest);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://user-images.githubusercontent.com/7871813/42720476-eb71a5c8-8759-11e8-8763-eb08b3480201.gif"></p>
+<p><strong>基于DOM</strong></p>
+<p>基于 DOM 的 XSS 攻击是指通过恶意脚本修改页面的 DOM 结构，是纯粹发生在客户端的攻击。</p>
+<p>看如下代码：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;input type&#x3D;&quot;text&quot; id&#x3D;&quot;input&quot;&gt;
+&lt;button id&#x3D;&quot;btn&quot;&gt;Submit&lt;&#x2F;button&gt;
+&lt;div id&#x3D;&quot;div&quot;&gt;&lt;&#x2F;div&gt;
+	
+   const input &#x3D; document.getElementById(&#39;input&#39;);
+   const btn &#x3D; document.getElementById(&#39;btn&#39;);
+   const div &#x3D; document.getElementById(&#39;div&#39;);
+	
+   let val;
+    
+   input.addEventListener(&#39;change&#39;, (e) &#x3D;&gt; &#123;
+       val &#x3D; e.target.value;
+   &#125;, false);
+	
+   btn.addEventListener(&#39;click&#39;, () &#x3D;&gt; &#123;
+       div.innerHTML &#x3D; &#96;&lt;a href&#x3D;$&#123;val&#125;&gt;testLink&lt;&#x2F;a&gt;&#96;
+   &#125;, false);
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>点击 Submit 按钮后，会在当前页面插入一个链接，其地址为用户的输入内容。如果用户在输入时构造了如下内容：</p>
+<pre class="line-numbers language-none"><code class="language-none">&#39;&#39; onclick&#x3D;alert(&#x2F;xss&#x2F;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>用户提交之后，页面代码就变成了：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;a href onlick&#x3D;&quot;alert(&#x2F;xss&#x2F;)&quot;&gt;testLink&lt;&#x2F;a&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="XSS-攻击的防范"><a href="#XSS-攻击的防范" class="headerlink" title="XSS 攻击的防范"></a>XSS 攻击的防范</h2><p><strong>输入检查</strong><br>用于对用户输入所包含的特殊字符或标签进行编码或过滤，如 &lt;，&gt;，script，防止 XSS 攻击</p>
+<pre class="line-numbers language-none"><code class="language-none">&#x2F;&#x2F; vuejs 中的 decodingMap
+&#x2F;&#x2F; 在 vuejs 中，如果输入带 script 标签的内容，会直接过滤掉
+const decodingMap &#x3D; &#123;
+  &#39;&lt;&#39;: &#39;&lt;&#39;,
+  &#39;&gt;&#39;: &#39;&gt;&#39;,
+  &#39;&quot;&#39;: &#39;&quot;&#39;,
+  &#39;&amp;&#39;: &#39;&amp;&#39;,
+  &#39;&amp;#10;&#39;: &#39;\n&#39;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="CSRF"><a href="#CSRF" class="headerlink" title="CSRF"></a>CSRF</h2><p>CSRF 攻击是攻击者借助受害者的 Cookie 骗取服务器的信任</p>
+<ul>
+<li><p>会话状态管理（如用户登录状态、购物车、游戏分数或其它需要记录的信息）</p>
+</li>
+<li><p>个性化设置（如用户自定义设置、主题等）</p>
+</li>
+<li><p>个性化设置（如用户自定义设置、主题等）</p>
+</li>
+</ul>
+<p>通过 Cookie 进行 CSRF 攻击</p>
+<p>假设有一个 bbs 站点：<a target="_blank" rel="noopener" href="http://www.c.com,当登录后的用户发起如下/">http://www.c.com，当登录后的用户发起如下</a> GET 请求时，会删除 ID 指定的帖子：</p>
+<pre><code>http://www.c.com:8002/content/delete/:id
+</code></pre>
+<p><strong>CSRF 攻击的防范</strong></p>
+<p>CSRF (Cross—Site Request Forgery)，既跨站点请求伪造，也被叫做 XSRF，和 XSS 一样也是一种比较常见的 web 攻击。CSRF攻击者会过过构造的第三方页面诱导受害者完成加载或者点击，利用受害者的权限，以其身份向合法网站发起恶意请求，通常用户发生状态改变的请求，比如虚拟货币的转账，账号信息修改，恶意发邮件等等，由于具有一定的隐蔽性，所以比较防范。</p>
+<p> 我们通过一个简单例子来演示 CSRF的攻击原理，如上图所示（TODO需要重做），正常网站A，攻击网站B，用户C，正常网站具有一个虚拟币转账的公功能，转账通过GET请求完成，且网站A不具备 CSRF 防范机制，攻击者利用这个漏洞恶意构造网站B，诱导用户C访问，达到恶意转账目的。</p>
+<p>转账的GET请求如下：</p>
+<pre class="line-numbers language-none"><code class="language-none">GET http:&#x2F;&#x2F;normal-site.com&#x2F;transfer.do?from&#x3D;rommel&amp;to&#x3D;alice&amp;amount&#x3D;100 HTTP&#x2F;1.1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这是我们出于演示方便使用GET请求来完成转账，实际应用远比这个列子要复杂，需要更加安全的机制，比如一次性 token，https 等，而且一般都是用POST请求。<br>​</p>
+<p>CSRF 的攻击过程过程图上图所示：</p>
+<p>CSRF 攻击有一个前提条件，是用户具有某个正常访问的访问权限。一般网站的访问断线都具备一定的有效期，比如1天过期，或者几个小时骨气，再次期间权限信息会保留在用户浏览器的cookie中，这本例子中假设用户C刚刚登录了网站A，全新还没有过期。</p>
+<p>攻击者利用正常网站A的CSFR漏洞，构造页面一个恶意网页B，在页面中包含对发往正常网站A的请求，在用户C加载页面B（或者点击某些元素时触发）时，会触发攻击请求，目的是为了实现虚拟币的转账，请求可能隐藏得很深，用户并不一定能发现，伪造的请求如下：</p>
+<pre><code>![](https://coderxing.gitbooks.io/architecture-evolution/assets/0D485010-0672-43D8-AC1E-9468D64AA14F.png)
+</code></pre>
+<p>由于加载恶意页面B和触发攻击请求都是在用户浏览器端完成的，因为之前用户登录过正常网站，发往正常网站的请求会带有用户授权信息（在cookie中），在授权信息没有过期的情况达到攻击目的。</p>
+<p>CSRF 的防范</p>
+<p>目前主要有如下几种方式：</p>
+<p>添加 Referer 域名白名单：HTTP 的 Referer 头记录了当前请求的来源页面的URL，如果用户是通过浏览器打开的网页一般都会带有这个信息。可以验证 URL 的域名是否在网站允许的白名单呢内，如果不在则拒绝请求。这种方式实现比较简单，而且可以在web 服务器层统一配置，减少了后端开发成本，当 Referer 页可以伪造，用户浏览器的可靠性也不能完全信赖，判断 Referer 可以做为一种辅助手段，但不能根治 CSRF。</p>
+<p>令牌 (Token )验证：令牌验证的方式，这是目前方法CSRF的一种普遍方法，其原理是在用户正式提交数据更新之前，给用户生成一个 token，一方面token保存在服务端，比如Session 或者缓存中，一方面输出请求发生的页面上，在用户提交请求时连同token一同提交，服务获得接收到请求之后再做token验证，token 不存在、或者token不一致，或者失效都算作验证失败。token 的生成具有一定的随机性，而且是在提交数据的页面生成，攻击这往往难于伪造。token 一般作为一个post 字段提交，或者作为ajax请求的header信息提交，例如：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;form&gt;
+&lt;input name&#x3D;&quot;from&quot; value&#x3D;&quot;rommel&quot; &#x2F;&gt;
+&lt;input name&#x3D;&quot;to&quot; value&#x3D;&quot;&quot; &#x2F;&gt;
+&lt;input name&#x3D;&quot;csrf_token&quot; value&#x3D;&quot;QMYjiBlZ9V9mGnap&quot; &#x2F;&gt;
+&lt;&#x2F;form&gt;
+
+$.ajax(&#123;
+headers: &#123;
+&quot;X-CSRF-TOKEN&quot;: &quot;QMYjiBlZ9V9mGnap&quot;
+&#125;
+&#125;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>另外，为了更可靠的安全性，token 在使用之后一般置为失效，避免被窃取。</p>
+<p>二次验证：对于一些铭感操作，比如设计到交易的操作，可以更加严格一些。在用户提交时可以让用户输入验证码，或者再次输入交易密码，确保是用户的真实操作，而不是机器触发的。</p>
+<p>使用 SameSite Cookie 属性：SameSite 是在跨域请求时是否传输 Cookie 的一种约束，顾名思义在 SameSite 的限制下，Cookie 的传输必须在同一个域名下。SameSite 属性有两种限制模式 strict 和 lax，默认为 lax。下面举例说明，对于下面的代码：</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;?php
+&#x2F;&#x2F;www.a.com&#x2F;test_samecookie.php
+&#x2F;&#x2F;第二个参数为false表示不不进行覆盖，否则只能设置一个cookie
+header(&quot;Set-Cookie: cookie1&#x3D;value1; domain&#x3D;a.com; SameSite&#x3D;Strict&quot;, false);
+header(&quot;Set-Cookie: cookie2&#x3D;value2; domain&#x3D;a.com; SameSite&#x3D;Lax&quot;, false);
+?&gt;
+
+	访问，www.a.com&#x2F;test_samecookie.php 通过Chome 的开发者工具查看cookie信息，如下：
+	
+	在 www.b.com&#x2F;access_same_page_in_site.php 构造同样的页面访问 www.a.com 中的任何页面。
+	
+	&lt;a href&#x3D;&quot;www.a.com&#x2F;test.html&quot;&gt;test&lt;&#x2F;a&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>点击页面上的链接之后，会发现，只有 cookie2 传递到了<a target="_blank" rel="noopener" href="http://www.a.com/">www.a.com</a> strict 模式限制所有的跨域cookie传输，lax 模式相当于在安全性和可用性之间做了个折中，某些场景允许跨域传输，比如 a 标签中中的GET请求，但会对 img、iframe 和 ajax 中的GET请求以及POST请求做限制，<br>目前只有 Chrome 和 Opera 浏览器支持 SameSite 属性。</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;?php
+$callback &#x3D; $_GET[&#39;callback&#39;];
+$data &#x3D; array(
+&#39;userid&#39; &#x3D;&gt; &#39;12345678&#39;,
+&#39;usernick&#39; &#x3D;&gt; &#39;coderxing&#39;
+);
+$json &#x3D; json_encode($data);
+echo &quot;$callback($json);&quot;;
+?&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>输出内容为：</p>
+<pre class="line-numbers language-none"><code class="language-none">cb(&#123;&quot;userid&quot;:&quot;12345678&quot;,&quot;usernick&quot;:&quot;coderxing&quot;&#125;);
+
+B 网站通过 JQuery 使用 jsonp 的代码如下：
+
+&lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.bootcss.com&#x2F;jquery&#x2F;3.2.1&#x2F;jquery.min.js&quot;&gt;&lt;&#x2F;script&gt;
+&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;
+$.ajax(&#123;
+url:&quot;http:&#x2F;&#x2F;www.a.com&#x2F;jsonp.php?callback&#x3D;cb&quot;,
+dataType:&#39;jsonp&#39;,
+jsonp:&#39;callback&#39;,
+success:function(result) &#123;
+console.log(result);
+&#125;
+&#125;);
+&lt;&#x2F;script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>通过Chrome浏览器访问：<a target="_blank" rel="noopener" href="http://www.b.com/use_jsonp.html%EF%BC%8C%E6%8E%A7%E5%88%B6%E5%8F%B0%E4%BC%9A%E8%BE%93%E5%87%BA">http://www.b.com/use_jsonp.html，控制台会输出</a>:</p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;
+var url &#x3D; &quot;http:&#x2F;&#x2F;www.a.com&#x2F;jsonp.php?callback&#x3D;cb&quot;;
+&#x2F;&#x2F;创建 script 节点
+var scriptNode &#x3D; document.createElement(&#39;script&#39;);
+scriptNode.type &#x3D; &#39;text&#x2F;javascript&#39;;
+scriptNode.src &#x3D; url;
+&#x2F;&#x2F;和好回调函数名称一致
+var cb &#x3D; function(data)&#123;
+console.log(data);
+&#125;
+&#x2F;&#x2F;动态添加 script 节点
+document.head.appendChild(scriptNode);
+&lt;&#x2F;script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p> 动态添加 script 节点之后，会自动加载 jsonp 网络请求，由于回调函数的名称为为 cb，当加载成功之后会自动执行 cb(data); 函数，使用JSON数据。</p>
+<p> 上面的 PHP 服务端代码没有加任何JSON劫持的防范，任何域名都可以通过JSONP的方式进行访问，就像前面CSRF一节介绍的攻击方法一样，如果攻击者诱导受害者访问含有攻击代码的页面，就会获取到相关的JSON数据，达到劫持目的，如果是登录之后才可见的数据，就会暴露用户隐私。</p>
+<p>对于JSON 劫持的方法其实和CSRF的防范方式是一脉相承的</p>
+<p>对 Referer 进行严格检查，通过白名单方式进行拦截过滤，并包括 Referer 为空的情况，不在白名单内的域名，或Referer为空均返回失败。<br>使用一次性TOKEN，和JSONP请求同时发送。<br>对callback参数进行校验，限制长度，并过滤掉符号字符。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">迪拜de天空</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://www.jpdaka.com/web/xss/">https://www.jpdaka.com/web/xss/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">迪拜de天空</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/XSS/">
+                                    <span class="chip bg-color">XSS</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="qzone,wechat,weibo,douban" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'mTki4DIBw9tVrbXsGF5JUGoF-gzGzoHsz',
+        appKey: 'nJqc2M7fOWiKzIoPJENinWKO',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/web/wx/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="小程序">
+                        
+                        <span class="card-title">小程序</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-12-06
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/web/" class="post-category">
+                                    web
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                        <span class="chip bg-color">小程序</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/tool/workweixin/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="微信红包封面">
+                        
+                        <span class="card-title">微信红包封面</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/tool/" class="post-category">
+                                    tool
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%B7%A5%E5%85%B7/">
+                        <span class="chip bg-color">工具</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="3778678"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2016-2021</span>
+            
+            <span id="year">2016</span>
+            <a href="/about" target="_blank">迪拜de天空</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+                <span id="icp"><img src="/medias/icp.png"
+                                    style="vertical-align: text-bottom;"/>
+                <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">粤ICP备18020498号</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/zhangsison" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1024760955@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

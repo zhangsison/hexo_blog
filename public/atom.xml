@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>迪拜de天空-触手可及的天空之城</title>
+  
+  <subtitle>迪拜de天空</subtitle>
+  <link href="https://www.jpdaka.com/atom.xml" rel="self"/>
+  
+  <link href="https://www.jpdaka.com/"/>
+  <updated>2021-04-27T06:40:37.151Z</updated>
+  <id>https://www.jpdaka.com/</id>
+  
+  <author>
+    <name>迪拜de天空</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hugo 自动部署 vercel</title>
+    <link href="https://www.jpdaka.com/web/hugo/"/>
+    <id>https://www.jpdaka.com/web/hugo/</id>
+    <published>2025-05-04T16:00:00.000Z</published>
+    <updated>2021-04-27T06:40:37.151Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;hugo&quot;&gt;&lt;a href=&quot;#hugo&quot; class=&quot;headerlink&quot; title=&quot;hugo&quot;&gt;&lt;/a&gt;hugo&lt;/h1&gt;&lt;p&gt;&lt;a href=&quot;https://hugoloveit.com/&quot;&gt;LoveIt主题&lt;/a&gt;&lt;/p&gt;
+&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="https://www.jpdaka.com/categories/web/"/>
+    
+    
+    <category term="hugo" scheme="https://www.jpdaka.com/tags/hugo/"/>
+    
+    <category term="vercel" scheme="https://www.jpdaka.com/tags/vercel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>API</title>
+    <link href="https://www.jpdaka.com/backend/api/"/>
+    <id>https://www.jpdaka.com/backend/api/</id>
+    <published>2021-05-27T03:57:03.890Z</published>
+    <updated>2021-05-27T03:32:30.060Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;API接口的入口-控制器&quot;&gt;&lt;a href=&quot;#API接口的入口-控制器&quot; class=&quot;headerlink&quot; title=&quot;API接口的入口 控制器&quot;&gt;&lt;/a&gt;API接口的入口 控制器&lt;/h1&gt;&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    <category term="php" scheme="https://www.jpdaka.com/categories/php/"/>
+    
+    
+    <category term="API" scheme="https://www.jpdaka.com/tags/API/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>css公共样式</title>
+    <link href="https://www.jpdaka.com/web/cssgg/"/>
+    <id>https://www.jpdaka.com/web/cssgg/</id>
+    <published>2021-05-27T03:57:03.872Z</published>
+    <updated>2020-11-21T06:59:22.815Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;css公共样式&quot;&gt;&lt;a href=&quot;#css公共样式&quot; class=&quot;headerlink&quot; title=&quot;css公共样式&quot;&gt;&lt;/a&gt;css公共样式&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-css&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="https://www.jpdaka.com/categories/web/"/>
+    
+    
+    <category term="css" scheme="https://www.jpdaka.com/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>element</title>
+    <link href="https://www.jpdaka.com/web/element/"/>
+    <id>https://www.jpdaka.com/web/element/</id>
+    <published>2020-12-05T16:00:00.000Z</published>
+    <updated>2021-05-27T03:37:05.812Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;element&quot;&gt;&lt;a href=&quot;#element&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="element" scheme="https://www.jpdaka.com/categories/element/"/>
+    
+    
+    <category term="element" scheme="https://www.jpdaka.com/tags/element/"/>
+    
+    <category term="vue" scheme="https://www.jpdaka.com/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用函数</title>
+    <link href="https://www.jpdaka.com/web/function/"/>
+    <id>https://www.jpdaka.com/web/function/</id>
+    <published>2020-02-23T16:00:00.000Z</published>
+    <updated>2021-02-24T03:27:00.161Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;function&quot;&gt;&lt;a href=&quot;#function&quot; class=&quot;headerlink&quot; title=&quot;function&quot;&gt;&lt;/a&gt;function&lt;/h1&gt;&lt;h2 id=&quot;JS数组对象排序&quot;&gt;&lt;a href=&quot;#JS数组对象排序&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="https://www.jpdaka.com/categories/web/"/>
+    
+    
+    <category term="function" scheme="https://www.jpdaka.com/tags/function/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Elasticsearch</title>
+    <link href="https://www.jpdaka.com/backend/Elasticsearch/"/>
+    <id>https://www.jpdaka.com/backend/Elasticsearch/</id>
+    <published>2019-12-08T16:00:00.000Z</published>
+    <updated>2020-11-21T06:59:22.820Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Elasticsearch&quot;&gt;&lt;a href=&quot;#Elasticsearch&quot; class=&quot;headerlink&quot; title=&quot;Elasticsearch&quot;&gt;&lt;/a&gt;Elasticsearch&lt;/h1&gt;&lt;h2 id=&quot;资料文档&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="php" scheme="https://www.jpdaka.com/categories/php/"/>
+    
+    
+    <category term="Elasticsearch" scheme="https://www.jpdaka.com/tags/Elasticsearch/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Thinkphp微信Auth实战开发</title>
+    <link href="https://www.jpdaka.com/backend/TP_WxAuth/"/>
+    <id>https://www.jpdaka.com/backend/TP_WxAuth/</id>
+    <published>2019-12-05T16:00:00.000Z</published>
+    <updated>2021-04-26T07:46:16.708Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Thinkphp微信Auth实战开发&quot;&gt;&lt;a href=&quot;#Thinkphp微信Auth实战开发&quot; class=&quot;headerlink&quot; title=&quot;Thinkphp微信Auth实战开发&quot;&gt;&lt;/a&gt;Thinkphp微信Auth实战开发&lt;/h1&gt;&lt;pre</summary>
+        
+      
+    
+    
+    
+    <category term="php" scheme="https://www.jpdaka.com/categories/php/"/>
+    
+    
+    <category term="Thinkphp" scheme="https://www.jpdaka.com/tags/Thinkphp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mac下载</title>
+    <link href="https://www.jpdaka.com/tool/mac-app/"/>
+    <id>https://www.jpdaka.com/tool/mac-app/</id>
+    <published>2019-12-05T16:00:00.000Z</published>
+    <updated>2021-04-27T03:54:25.305Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;mac下载&quot;&gt;&lt;a href=&quot;#mac下载&quot; class=&quot;headerlink&quot; title=&quot;mac下载&quot;&gt;&lt;/a&gt;mac下载&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="tool" scheme="https://www.jpdaka.com/categories/tool/"/>
+    
+    
+    <category term="link" scheme="https://www.jpdaka.com/tags/link/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>phpstorm激活码</title>
+    <link href="https://www.jpdaka.com/tool/phpstorm/"/>
+    <id>https://www.jpdaka.com/tool/phpstorm/</id>
+    <published>2019-12-05T16:00:00.000Z</published>
+    <updated>2021-05-27T03:36:28.747Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;phpstorm激活码&quot;&gt;&lt;a href=&quot;#phpstorm激活码&quot; class=&quot;headerlink&quot; title=&quot;phpstorm激活码&quot;&gt;&lt;/a&gt;phpstorm激活码&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="tool" scheme="https://www.jpdaka.com/categories/tool/"/>
+    
+    
+    <category term="phpstorm" scheme="https://www.jpdaka.com/tags/phpstorm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>项目式学习指南</title>
+    <link href="https://www.jpdaka.com/tool/xiangmuxuexi/"/>
+    <id>https://www.jpdaka.com/tool/xiangmuxuexi/</id>
+    <published>2019-12-05T16:00:00.000Z</published>
+    <updated>2020-11-21T06:59:22.827Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;项目式学习指南&quot;&gt;&lt;a href=&quot;#项目式学习指南&quot; class=&quot;headerlink&quot; title=&quot;项目式学习指南&quot;&gt;&lt;/a&gt;项目式学习指南&lt;/h2&gt;&lt;iframe width=&quot;100%&quot; </summary>
+        
+      
+    
+    
+    
+    <category term="tool" scheme="https://www.jpdaka.com/categories/tool/"/>
+    
+    
+    <category term="Mac" scheme="https://www.jpdaka.com/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vue 安装</title>
+    <link href="https://www.jpdaka.com/web/vue/"/>
+    <id>https://www.jpdaka.com/web/vue/</id>
+    <published>2019-12-05T16:00:00.000Z</published>
+    <updated>2021-01-19T06:49:59.235Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;vue-安装&quot;&gt;&lt;a href=&quot;#vue-安装&quot; class=&quot;headerlink&quot; title=&quot;vue 安装&quot;&gt;&lt;/a&gt;vue 安装&lt;/h2&gt;&lt;p&gt;安装npm install webpack -g&lt;/p&gt;
+&lt;p&gt;卸载 npm uninstall</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="https://www.jpdaka.com/categories/web/"/>
+    
+    
+    <category term="vue" scheme="https://www.jpdaka.com/tags/vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>webpack</title>
+    <link href="https://www.jpdaka.com/web/webpack/"/>
+    <id>https://www.jpdaka.com/web/webpack/</id>
+    <published>2019-12-05T16:00:00.000Z</published>
+    <updated>2020-11-21T06:59:22.819Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;webpack&quot;&gt;&lt;a href=&quot;#webpack&quot; class=&quot;headerlink&quot; title=&quot;webpack&quot;&gt;&lt;/a&gt;webpack&lt;/h2&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="https://www.jpdaka.com/categories/web/"/>
+    
+    
+    <category term="webpack" scheme="https://www.jpdaka.com/tags/webpack/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小程序</title>
+    <link href="https://www.jpdaka.com/web/wx/"/>
+    <id>https://www.jpdaka.com/web/wx/</id>
+    <published>2019-12-05T16:00:00.000Z</published>
+    <updated>2021-05-24T06:46:51.433Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;小程序&quot;&gt;&lt;a href=&quot;#小程序&quot; class=&quot;headerlink&quot; title=&quot;小程序&quot;&gt;&lt;/a&gt;小程序&lt;/h1&gt;&lt;h3 id=&quot;图片等比例&quot;&gt;&lt;a href=&quot;#图片等比例&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="https://www.jpdaka.com/categories/web/"/>
+    
+    
+    <category term="小程序" scheme="https://www.jpdaka.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>XSS</title>
+    <link href="https://www.jpdaka.com/web/xss/"/>
+    <id>https://www.jpdaka.com/web/xss/</id>
+    <published>2019-12-05T16:00:00.000Z</published>
+    <updated>2020-11-21T06:59:22.820Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;XSS&quot;&gt;&lt;a href=&quot;#XSS&quot; class=&quot;headerlink&quot; title=&quot;XSS&quot;&gt;&lt;/a&gt;XSS&lt;/h2&gt;&lt;p&gt;当浏览器请求 &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="https://www.jpdaka.com/categories/web/"/>
+    
+    
+    <category term="XSS" scheme="https://www.jpdaka.com/tags/XSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信红包封面</title>
+    <link href="https://www.jpdaka.com/tool/workweixin/"/>
+    <id>https://www.jpdaka.com/tool/workweixin/</id>
+    <published>2019-11-05T16:00:00.000Z</published>
+    <updated>2020-11-21T06:59:22.827Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;微信红包封面&quot;&gt;&lt;a href=&quot;#微信红包封面&quot; class=&quot;headerlink&quot; title=&quot;微信红包封面&quot;&gt;&lt;/a&gt;微信红包封面&lt;/h2&gt;&lt;p&gt;#微信红包封面 #&lt;/p&gt;
+&lt;p&gt;定制“微信红包封面”，成员领取后可在发微信红包时使用&lt;/p&gt;
+&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="tool" scheme="https://www.jpdaka.com/categories/tool/"/>
+    
+    
+    <category term="工具" scheme="https://www.jpdaka.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PDFJS</title>
+    <link href="https://www.jpdaka.com/web/pdfjs/"/>
+    <id>https://www.jpdaka.com/web/pdfjs/</id>
+    <published>2019-11-05T16:00:00.000Z</published>
+    <updated>2020-11-21T06:59:22.818Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;PDFJS在线预览PDF&quot;&gt;&lt;a href=&quot;#PDFJS在线预览PDF&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="https://www.jpdaka.com/categories/web/"/>
+    
+    
+    <category term="PDFJS" scheme="https://www.jpdaka.com/tags/PDFJS/"/>
+    
+    <category term="pdf.js" scheme="https://www.jpdaka.com/tags/pdf-js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>wordpress</title>
+    <link href="https://www.jpdaka.com/backend/wordpress/"/>
+    <id>https://www.jpdaka.com/backend/wordpress/</id>
+    <published>2019-10-07T16:00:00.000Z</published>
+    <updated>2021-04-27T04:00:01.647Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;wordpress&quot;&gt;&lt;a href=&quot;#wordpress&quot; class=&quot;headerlink&quot; title=&quot;wordpress&quot;&gt;&lt;/a&gt;wordpress&lt;/h1&gt;&lt;h2 id=&quot;wordpress主题&quot;&gt;&lt;a href=&quot;#wordpress主题&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="php" scheme="https://www.jpdaka.com/categories/php/"/>
+    
+    
+    <category term="wordpress" scheme="https://www.jpdaka.com/tags/wordpress/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>travis-ci</title>
+    <link href="https://www.jpdaka.com/server/travis-ci/"/>
+    <id>https://www.jpdaka.com/server/travis-ci/</id>
+    <published>2019-08-29T16:00:00.000Z</published>
+    <updated>2020-11-21T06:59:22.830Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;travis-ci&quot;&gt;&lt;a href=&quot;#travis-ci&quot; class=&quot;headerlink&quot; title=&quot;travis-ci&quot;&gt;&lt;/a&gt;travis-ci&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;获取 travis-ci 项目的 ID 跟</summary>
+        
+      
+    
+    
+    
+    <category term="server" scheme="https://www.jpdaka.com/categories/server/"/>
+    
+    
+    <category term="travis-ci" scheme="https://www.jpdaka.com/tags/travis-ci/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>gulp</title>
+    <link href="https://www.jpdaka.com/web/gulp/"/>
+    <id>https://www.jpdaka.com/web/gulp/</id>
+    <published>2019-07-05T16:00:00.000Z</published>
+    <updated>2020-11-21T06:59:22.816Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;gulp&quot;&gt;&lt;a href=&quot;#gulp&quot; class=&quot;headerlink&quot; title=&quot;gulp&quot;&gt;&lt;/a&gt;gulp&lt;/h2&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="web" scheme="https://www.jpdaka.com/categories/web/"/>
+    
+    
+    <category term="gulp" scheme="https://www.jpdaka.com/tags/gulp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git History</title>
+    <link href="https://www.jpdaka.com/server/githistory/"/>
+    <id>https://www.jpdaka.com/server/githistory/</id>
+    <published>2018-11-08T16:00:00.000Z</published>
+    <updated>2021-05-21T01:49:27.992Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Git-History-查看git修改记录&quot;&gt;&lt;a href=&quot;#Git-History-查看git修改记录&quot; class=&quot;headerlink&quot; title=&quot;Git History 查看git修改记录&quot;&gt;&lt;/a&gt;Git History</summary>
+        
+      
+    
+    
+    
+    <category term="server" scheme="https://www.jpdaka.com/categories/server/"/>
+    
+    
+    <category term="Git" scheme="https://www.jpdaka.com/tags/Git/"/>
+    
+    <category term="History，git修改记录" scheme="https://www.jpdaka.com/tags/History%EF%BC%8Cgit%E4%BF%AE%E6%94%B9%E8%AE%B0%E5%BD%95/"/>
+    
+  </entry>
+  
+</feed>
