@@ -1,6 +1,6 @@
 ---
 
-title: 获取访问者浏览器
+title: php获取访问者浏览器
 date: 2015-12-06
 categories: [php]
 tags: [php]
@@ -9,7 +9,7 @@ tags: [php]
 
 
 
-## 获取访问者浏览器
+# 获取访问者浏览器
 
 ```php
 

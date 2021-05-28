@@ -8,7 +8,7 @@ tags: [foreach]
 ---
 
 
-
+# php foreach
 
 ## 实现将一维数组转换为每3个连续值组成的二维数组
 
@@ -111,9 +111,10 @@ tags: [foreach]
     		}
     	}
     }
-
+```
 ## 每次遍历出来值组成以为数组
 
+```
 	$a = array(array(array(0,1),1,array(2,3)),array(3,4,5),array(6,7,8));
 	function arrfun($arr, &$new_arr) {
 		if (is_array($arr)) {
@@ -136,10 +137,10 @@ tags: [foreach]
 	
 	print_r($new_arr);
 
-
+```
 
 ## 遍历三维数组
-
+```
 	$arr_temp5 = array();
 	foreach($arr_temp2 as $value) {
 		foreach($value as $v) {
@@ -147,9 +148,9 @@ tags: [foreach]
 		}
 	}
 	unset($arr_temp2, $value, $v);
-
+```
 ## 一二维
-
+```
 	foreach($arr_age as $age) {
 		if (is_array($age)) {
 			foreach($age as $detail) {

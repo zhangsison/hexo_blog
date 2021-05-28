@@ -9,10 +9,9 @@ tags: [mysql]
 
 
 
-## mysql
+# mysql
 
-```php
-
+```
 1、说明：创建数据库
 CREATE DATABASE database-name
 2、说明：删除数据库
@@ -65,13 +64,13 @@ B：right （outer） join:
 C：full/cross （outer） join： 
 全外连接：不仅包括符号连接表的匹配行，还包括两个连接表中的所有记录。
 12、分组:Group by:
-   一张表，一旦分组 完成后，查询后只能得到组相关的信息。
-    组相关的信息：（统计信息） count,sum,max,min,avg  分组的标准)
-    在SQLServer中分组时：不能以text,ntext,image类型的字段作为分组依据
-   在selecte统计函数中的字段，不能和普通的字段放在一起；
+一张表，一旦分组 完成后，查询后只能得到组相关的信息。
+组相关的信息：（统计信息） count,sum,max,min,avg  分组的标准)
+在SQLServer中分组时：不能以text,ntext,image类型的字段作为分组依据
+在selecte统计函数中的字段，不能和普通的字段放在一起；
 
 13、对数据库进行操作：
-   分离数据库： sp_detach_db;附加数据库：sp_attach_db 后接表明，附加需要完整的路径名
+分离数据库： sp_detach_db;附加数据库：sp_attach_db 后接表明，附加需要完整的路径名
 14.如何修改数据库的名称:
 sp_renamedb 'old_name', 'new_name'
 
@@ -117,13 +116,13 @@ SQL: select * from 日程安排 where datediff('minute',f开始时间,getdate())
 
 13、说明：一条sql 语句搞定数据库分页select top 10 b.* from (select top 20 主键字段,排序字段 from 表名 order by 排序字段 desc) a,表名 b where b.主键字段 = a.主键字段 order by a.排序字段具体实现：关于数据库分页：
 
-  declare @start int,@end int
+declare @start int,@end int
 
-  @sql  nvarchar(600)
+@sql  nvarchar(600)
 
-  set @sql=’select top’+str(@end-@start+1)+’+from T where rid not in(select top’+str(@str-1)+’Rid from T where Rid>-1)’
+set @sql=’select top’+str(@end-@start+1)+’+from T where rid not in(select top’+str(@str-1)+’Rid from T where Rid>-1)’
 
-  exec sp_executesql @sql
+exec sp_executesql @sql
 
 注意：在top后不能直接跟一个变量，所以在实际应用中只有这样的进行特殊的处理。Rid为一个标识列，如果top后还有具体的字段，这样做是非常有好处的。因为这样可以避免 top的字段如果是逻辑索引的，查询的结果后实际表中的不一致（逻辑索引中的数据有可能和数据表中的不一致，而查询时如果处在索引则首先查询索引）
 
@@ -145,14 +144,14 @@ select newid()
 19、说明：删除重复记录
 1),delete from tablename where id not in (select max(id) from tablename group by col1,col2,...)
 2),select distinct * into temp from tablename
-  delete from tablename
-  insert into tablename select * from temp
+delete from tablename
+insert into tablename select * from temp
 评价：这种操作牵连大量的数据的移动，这种做法不适合大容量但数据操作3),例如：在一个外部表中导入数据，由于某些原因第一次只导入了一部分，但很难判断具体位置，这样只有在下一次全部导入，这样也就产生好多重复的字段，怎样删除重复字段
 
 alter table tablename
 --添加一个自增列
 add  column_b int identity(1,1)
- delete from tablename where column_b not in(
+delete from tablename where column_b not in(
 select max(column_b)  from tablename group by column1,column2,...)
 alter table tablename drop column column_b
 
@@ -227,55 +226,55 @@ GO
 7、日志清除
 SET NOCOUNT ON
 DECLARE @LogicalFileName sysname,
- @MaxMinutes INT,
- @NewSize INT
+@MaxMinutes INT,
+@NewSize INT
 
 
 USE tablename -- 要操作的数据库名
 SELECT  @LogicalFileName = 'tablename_log', -- 日志文件名
 @MaxMinutes = 10, -- Limit on time allowed to wrap log.
- @NewSize = 1  -- 你想设定的日志文件的大小(M)
+@NewSize = 1  -- 你想设定的日志文件的大小(M)
 
 Setup / initialize
 DECLARE @OriginalSize int
 SELECT @OriginalSize = size 
- FROM sysfiles
- WHERE name = @LogicalFileName
+FROM sysfiles
+WHERE name = @LogicalFileName
 SELECT 'Original Size of ' + db_name() + ' LOG is ' + 
- CONVERT(VARCHAR(30),@OriginalSize) + ' 8K pages or ' + 
- CONVERT(VARCHAR(30),(@OriginalSize*8/1024)) + 'MB'
- FROM sysfiles
- WHERE name = @LogicalFileName
+CONVERT(VARCHAR(30),@OriginalSize) + ' 8K pages or ' + 
+CONVERT(VARCHAR(30),(@OriginalSize*8/1024)) + 'MB'
+FROM sysfiles
+WHERE name = @LogicalFileName
 CREATE TABLE DummyTrans
- (DummyColumn char (8000) not null)
+(DummyColumn char (8000) not null)
 
 
 DECLARE @Counter    INT,
- @StartTime DATETIME,
- @TruncLog   VARCHAR(255)
+@StartTime DATETIME,
+@TruncLog   VARCHAR(255)
 SELECT @StartTime = GETDATE(),
- @TruncLog = 'BACKUP LOG ' + db_name() + ' WITH TRUNCATE_ONLY'
+@TruncLog = 'BACKUP LOG ' + db_name() + ' WITH TRUNCATE_ONLY'
 
 DBCC SHRINKFILE (@LogicalFileName, @NewSize)
 EXEC (@TruncLog)
 -- Wrap the log if necessary.
 WHILE @MaxMinutes > DATEDIFF (mi, @StartTime, GETDATE()) -- time has not expired
- AND @OriginalSize = (SELECT size FROM sysfiles WHERE name = @LogicalFileName)  
- AND (@OriginalSize * 8 /1024) > @NewSize  
- BEGIN -- Outer loop.
+AND @OriginalSize = (SELECT size FROM sysfiles WHERE name = @LogicalFileName)  
+AND (@OriginalSize * 8 /1024) > @NewSize  
+BEGIN -- Outer loop.
 SELECT @Counter = 0
- WHILE   ((@Counter < @OriginalSize / 16) AND (@Counter < 50000))
- BEGIN -- update
- INSERT DummyTrans VALUES ('Fill Log') DELETE DummyTrans
- SELECT @Counter = @Counter + 1
- END
- EXEC (@TruncLog)  
- END
+WHILE   ((@Counter < @OriginalSize / 16) AND (@Counter < 50000))
+BEGIN -- update
+INSERT DummyTrans VALUES ('Fill Log') DELETE DummyTrans
+SELECT @Counter = @Counter + 1
+END
+EXEC (@TruncLog)  
+END
 SELECT 'Final Size of ' + db_name() + ' LOG is ' +
- CONVERT(VARCHAR(30),size) + ' 8K pages or ' + 
- CONVERT(VARCHAR(30),(size*8/1024)) + 'MB'
- FROM sysfiles 
- WHERE name = @LogicalFileName
+CONVERT(VARCHAR(30),size) + ' 8K pages or ' + 
+CONVERT(VARCHAR(30),(size*8/1024)) + 'MB'
+FROM sysfiles 
+WHERE name = @LogicalFileName
 DROP TABLE DummyTrans
 SET NOCOUNT OFF
 
@@ -295,7 +294,7 @@ DECLARE @OwnerName   as NVARCHAR(128)
 
 DECLARE curObject CURSOR FOR 
 select 'Name'    = name,
-   'Owner'    = user_name(uid)
+'Owner'    = user_name(uid)
 from sysobjects
 where user_name(uid)=@OldOwner
 order by name
@@ -306,8 +305,8 @@ WHILE(@@FETCH_STATUS=0)
 BEGIN     
 if @Owner=@OldOwner 
 begin
-   set @OwnerName = @OldOwner + '.' + rtrim(@Name)
-   exec sp_changeobjectowner @OwnerName, @NewOwner
+set @OwnerName = @OldOwner + '.' + rtrim(@Name)
+exec sp_changeobjectowner @OwnerName, @NewOwner
 end
 -- select @name,@NewOwner,@OldOwner
 
@@ -323,21 +322,21 @@ declare @i int
 set @i=1
 while @i<30
 begin
-    insert into test (userid) values(@i)
-    set @i=@i+1
+insert into test (userid) values(@i)
+set @i=@i+1
 end
 案例：
 有如下表，要求就裱中所有沒有及格的成績，在每次增長0.1的基礎上，使他們剛好及格:
 
-    Name     score
-     
-    Zhangshan   80
-     
-    Lishi       59
-     
-    Wangwu      50
-     
-    Songquan    69
+Name     score
+
+Zhangshan   80
+
+Lishi       59
+
+Wangwu      50
+
+Songquan    69
 
 while((select min(score) from tb_table)<60)
 
@@ -349,11 +348,11 @@ where score<60
 
 if  (select min(score) from tb_table)>60
 
-  break
+break
 
- else
+else
 
-    continue
+continue
 
 end
 
@@ -381,8 +380,8 @@ EXEC master..xp_fixeddrives
 
 5.比较A,B表是否相等:
 if (select checksum_agg(binary_checksum(*)) from A)
-     =
-    (select checksum_agg(binary_checksum(*)) from B)
+=
+(select checksum_agg(binary_checksum(*)) from B)
 print '相等'
 else
 print '不相等'
@@ -400,11 +399,11 @@ Select Top M-N * From 表 Where ID in (Select Top M ID From 表) Order by ID   D
 N到结尾记录Select Top N * From 表 Order by ID Desc
 案例例如1：一张表有一万多条记录，表的第一个字段 RecID 是自增长字段， 写一个SQL语句， 找出表的第31到第40个记录。
 
- select top 10 recid from A where recid not  in(select top 30 recid from A)
+select top 10 recid from A where recid not  in(select top 30 recid from A)
 
 分析：如果这样写会产生某些问题，如果recid在表中存在逻辑索引。
 
-    select top 10 recid from A where……是从索引中查找，而后面的select top 30 recid from A则在数据表中查找，这样由于索引中的顺序有可能和数据表中的不一致，这样就导致查询到的不是本来的欲得到的数据。
+select top 10 recid from A where……是从索引中查找，而后面的select top 30 recid from A则在数据表中查找，这样由于索引中的顺序有可能和数据表中的不一致，这样就导致查询到的不是本来的欲得到的数据。
 
 解决方案
 
@@ -460,17 +459,17 @@ select * into 表 from ITSV.数据库名.dbo.表名
 
 exec sp_dropserver  'ITSV ', 'droplogins '
 
- 
 
---连接远程/局域网数据(openrowset/openquery/opendatasource)
+
+-- 连接远程/局域网数据(openrowset/openquery/opendatasource)
 
 --1、openrowset
 
---查询示例
+-- 查询示例
 
 select * from openrowset( 'SQLOLEDB ', 'sql服务器名 '; '用户名 '; '密码 ',数据库名.dbo.表名)
 
---生成本地表
+-- 生成本地表
 
 select * into 表 from openrowset( 'SQLOLEDB ', 'sql服务器名 '; '用户名 '; '密码 ',数据库名.dbo.表名)
 

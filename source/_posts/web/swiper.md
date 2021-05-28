@@ -8,10 +8,7 @@ tags: [swiper]
 ---
 
 
-
 ## swiper
-
-
 
 ##  同一个页面面使用两个swiper轮播 ##
 

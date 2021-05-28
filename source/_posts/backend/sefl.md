@@ -1,6 +1,6 @@
 ---
 
-title: self
+title: php安全函数
 date: 2015-12-18
 categories: [php]
 tags: [php函数]
@@ -8,7 +8,7 @@ tags: [php函数]
 ---
 
 
-## php安全函数 ##
+# php安全函数 
 
 
 

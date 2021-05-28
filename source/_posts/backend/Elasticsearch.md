@@ -9,9 +9,7 @@ tags: [Elasticsearch]
 ---
 
 
-# Elasticsearch
-
-## 资料文档
+# 资料文档
 
 ```bash
 
@@ -40,7 +38,7 @@ https://learnku.com/docs/elasticsearch-php/6.0
 ```
 
 
-## 安装并运行Elasticsearch
+# 安装并运行Elasticsearch
 
 安装 Elasticsearch 之前，你需要先安装一个较新版本的 Java，最好的选择是，你可以从 www.java.com 获得官方提供的最新版本的Java。
 你可以从 elastic 的官网 elastic.co/downloads/elasticsearch 获取最新版本的Elasticsearch。解压文档后，按照下面的操作，即可在前台(foregroud)启动 Elasticsearch：
@@ -73,7 +71,7 @@ https://learnku.com/docs/elasticsearch-php/6.0
 
 ```
 
-## Kibana
+# Kibana
 Kibana 是一个开源的分析和可视化平台，旨在与 Elasticsearch 合作。Kibana 提供搜索、查看和与存储在 Elasticsearch 索引中的数据进行交互的功能。开发者或运维人员可以轻松地执行高级数据分析，并在各种图表、表格和地图中可视化数据。
   你可以从 elastic 的官网 https://www.elastic.co/downloads/kibana 获取最新版本的Kibana
 

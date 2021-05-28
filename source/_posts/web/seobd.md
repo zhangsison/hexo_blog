@@ -9,10 +9,7 @@ tags: [百度]
 
 
 
-## SEO链接提交
-
-
-
+# SEO链接提交
 
 
 ## 链接提交 ##
@@ -57,7 +54,7 @@ tags: [百度]
 
 
 ## 自动推送百度 ##
-
+```
 	(function(){
 	
 	var bp = document.createElement('script');
@@ -69,8 +66,9 @@ tags: [百度]
 	s.parentNode.insertBefore(bp, s);
 	
 	})();
-
+```
 ## 改良版本 ##
+```
 	<script>
 	(function(){
 		var canonicalURL, curProtocol;
@@ -96,7 +94,7 @@ tags: [百度]
 	    //Assign script content. Replace current URL with the canonical URL
 		!function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
 	</script>
-
+```
 ## sitemap提交推送 ##
 
 请填写数据文件地址

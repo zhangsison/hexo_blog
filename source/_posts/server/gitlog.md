@@ -9,12 +9,10 @@ tags: [GitHub]
 
 
 
-## 如果你在git上提交了错误的commit，不要慌，通过下面的方法可以回退到之前的commit
-
+# 如果你在git上提交了错误的commit，不要慌，通过下面的方法可以回退到之前的commit
 
 
 ## git log ##
-
 
 
 > 通过git log可以查看我们之前提交的commit_id：

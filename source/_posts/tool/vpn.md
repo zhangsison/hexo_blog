@@ -7,18 +7,15 @@ tags: [VPN, 工具]
 
 ---
 
+# VPN
+https://github.com/freefq/free
 
 
 ## 谷歌浏览器插件
 
-
-
 > 谷歌上网助手  https://iguge.app/
 >
-
 > 插件安装 http://cowxy.pro/
-
-
 
 
 

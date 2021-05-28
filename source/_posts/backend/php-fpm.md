@@ -20,7 +20,7 @@ php-fpm进程管理一共有三种模式：ondemand、static、dynamic，我们�
 
  
 
-# ondemand
+# php-fpm ondemand
 
 > 在php-fpm启动的时候，不会给这个pool启动任何一个worker，是按需启动，当有连接过来才会启动。
 

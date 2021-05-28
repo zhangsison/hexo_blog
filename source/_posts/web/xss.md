@@ -25,6 +25,7 @@ tags: [XSS]
  拼接到 HTML 中返回给浏览器。形成了如下的 HTML：
 
 ```js
+
 <input type="text" value="" <script>alert('XSS');</script>"
 <button~搜索</button>
 <div>
@@ -36,6 +37,7 @@ tags: [XSS]
 <div>
 您搜索的关键词是：<%= escapeHTML(getParameter("keyword")) %>
 </div>
+
 ```
 
 **escapeHTML()**

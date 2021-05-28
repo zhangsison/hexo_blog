@@ -7,17 +7,12 @@ tags: [github, CDN]
 
 ---
 
+# 站长工具
+都是搞开发的，都会用F12看看网络或者资源请求的地址是什么，以上面耗时最慢的地址为例，
+域名为：github.githubassets.com
+打开站长工具的PING功能，地址为：http://ping.chinaz.com/github.githubassets.com
 
-
-# 在线查看GitHub代码
-
- 在域名后面加 1s
-
-https://github1s.com/zhangsison/Toll
-
-
-
-## GitHub 镜像访问三个最常用的镜像地址
+# GitHub 镜像访问三个最常用的镜像地址
 
 <https://github.com.cnpmjs.org>
 

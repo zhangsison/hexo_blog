@@ -7,12 +7,13 @@ tags: [CURL]
 
 ---
 
+cURL 是一个用来传输数据的工具，支持多种协议，如在 Linux 下用 curl 命令行可以发送各种 HTTP 请求。PHP 的 cURL 是一个底层的库，它能根据不同协议跟各种服务器通讯，HTTP 协议是其中一种
+
 
 
 # PHP对CURL函数的封装，支持GET/POST请求
 
-
-代码如下
+ 例：
 
 ```bash
 

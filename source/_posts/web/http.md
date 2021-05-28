@@ -9,215 +9,59 @@ tags: [http]
 
 
 
+## 请求方法
 
+GET: 通常用来获取资源
+HEAD: 获取资源的元信息
+POST: 提交数据，即上传数据
+PUT: 修改数据
+DELETE: 删除资源(几乎用不到)
+CONNECT: 建立连接隧道，用于代理服务器
+OPTIONS: 列出可对资源实行的请求方法，用来跨域请求
+TRACE: 追踪请求-响应的传输路径
 
-## http
+## GET 和 POST 
+首先最直观的是语义上的区别。
+而后又有这样一些具体的差别:
 
+从缓存的角度，GET 请求会被浏览器主动缓存下来，留下历史记录，而 POST 默认不会。
+从编码的角度，GET 只能进行 URL 编码，只能接收 ASCII 字符，而 POST 没有限制。
+从参数的角度，GET 一般放在 URL 中，因此不安全，POST 放在请求体中，更适合传输敏感信息。
+从幂等性的角度，GET是幂等的，而POST不是。(幂等表示执行相同的操作，结果也是相同的)
+从TCP的角度，GET 请求会把请求报文一次性发出去，而 POST 会分为两个 TCP 数据包，首先发 header 部分，如果服务器响应 100(continue)， 然后发 body 部分。(火狐浏览器除外，它的 POST 请求只发一个 TCP 包)
 
+## 理解 URI
+URI, 全称为(Uniform Resource Identifier), 也就是统一资源标识符，它的作用很简单，就是区分互联网上不同的资源。
+但是，它并不是我们常说的网址, 网址指的是URL, 实际上URI包含了URN和URL两个部分，由于 URL 过于普及，就默认将 URI 视为 URL 了。
 
-请求：Accept-Encoding
+如何理解 HTTP 状态码？
+RFC 规定 HTTP 的状态码为三位数，被分为五类:
 
-响应：Content-Encoding
+1xx: 表示目前是协议处理的中间状态，还需要后续操作。
+2xx: 表示成功状态。
+3xx: 重定向状态，资源位置发生变动，需要重新请求。
+4xx: 请求报文有误。
+5xx: 服务器端发生错误。
 
-取值：gzip、deflate、sdch
+## 处理大文件的传输
+对于几百 M 甚至上 G 的大文件来说，如果要一口气全部传输过来显然是不现实的，会有大量的等待时间，严重影响用户体验。因此，HTTP 针对这一场景，采取了范围请求的解决方案，允许客户端仅仅请求一个资源的一部分。
+如何支持
+当然，前提是服务器要支持范围请求，要支持这个功能，就必须加上这样一个响应头:
+Accept-Ranges: none
+复制代码用来告知客户端这边是支持范围请求的。
+Range 字段拆解
+而对于客户端而言，它需要指定请求哪一部分，通过Range这个请求头字段确定，格式为bytes=x-y。接下来就来讨论一下这个 Range 的书写格式:
 
-作用：对请求体和响应体进行压缩，压缩文本数据能减少带宽并加快显示速度。压缩的时间会远小于传输的时间，所以不用担心压缩。
+0-499表示从开始到第 499 个字节。
+500- 表示从第 500 字节到文件终点。
+-100表示文件的最后100个字节。
 
-请求头
+服务器收到请求之后，首先验证范围是否合法，如果越界了那么返回416错误码，否则读取相应片段，返回206状态码。
+同时，服务器需要添加Content-Range字段，这个字段的格式根据请求头中Range字段的不同而有所差异。
 
-响应头
 
-Connection
 
-请求：Connection
 
-响应：Connection
 
-取值范围：
 
-Keep-Alive、Close
-
-作用：
-
-Keep-Alive：可以减少TCP建立成本，销毁成本。（长连接），但是占用端口时间长，高并发时需要考虑。
-
-Close：每次连接将使用新的TCP连接
-
-在请求一个网址时，返回最终页面的内容大多数有多个请求组成(css、js、png等资源的请求），所以如果开启keep-alive可以让页面的所有请求都在一次tcp连接建立后传输。
-
-请求
-
-响应头
-
-Cookie
-
-响应：Set-Cookie
-
-如：sid = test; path=/;    键值对形式
-
-请求：Cookie
-
-如：sid = test;
-
-特殊值：expires：失效时间，path:该Cookie适用于哪些请求路径，domain：试用于哪些域名。
-
-当服务端Set-Cookie时，浏览器记录此键值对的值并在下次请求时提交上去。
-
-session通过Cookie实现
-
-Cookie大小客户端服务端实现有可能不一样，一般4K.
-
-响应头
-
-请求头
-
-Accept-Language
-
-请求：Accept-Language
-
-取值范围：
-
-en,zh-CN,zh;q=0.8,zh;q=0.6,zh-TW;q=0.4
-
-其中q代表权重，en默认权重为1
-
-作用：
-
-客户端接收的语言。根据此值做本地化判断，如：英文与中文页面的切换。
-
-image.png
-
-Referer
-
-请求：Referer
-
-客户端请求时添加此值，标识从哪个网站跳过来的。
-
-可做资源防盗链时使用。
-
-referer
-
-User-Agent
-
-请求：User-Agent
-
-值如：
-
-Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.90 Safari/537.36
-
-客户端的一些信息，包括：客户端硬件信息，操作系统，浏览器信息等。
-
-作用：
-
-根据这个值做一些数据统计分析，如果是手机端则推送适合手机的内容。
-
-User-Agent
-
-Modified-Since
-
-请求：If-Modified-Since
-
-响应：Last-Modified
-
-值如：Fri, 23 Oct 2015 05:36:06 GM
-
-作用：
-
-客户端先保存服务端的Last-Modified与此资源信息到本地，当此资源以后请求时，把此值设为If-Modified-Since并请求到服务器。
-
-服务端判断此值未变或不需要更新时返回304，表明客户端可直接使用缓存。
-
-请求头
-
-响应头
-
-Cache-Control
-
-响应：cache-control
-
-值如：max-age=121737619或private, max-age=0, no-cache
-
-max-age设置缓存多少时间，max-age=0就是没有缓存。
-
-作用：
-
-控制缓存时间，相对时间长度。
-
-image.png
-
-image.png
-
-Expires
-
-响应：Expires
-
-值如：Wed, 25 Oct 2017 09:05:12 GMT
-
-设置绝对时间
-
-作用：
-
-指定到特定时间过期。
-
-image.png
-
-Etag
-
-响应：Etag
-
-请求：if-none-match
-
-值如：“zdsfsdf”
-
-作用：
-
-Last-Modified类似，服务端给文件生成一个标识，下次客户端存在if-none-match中提交到服务端，服务端进行比较来判断文件是否改变，从而做出是否缓存决定。
-
-Etag 主要为了解决 Last-Modified 无法解决的一些问题。
-
-比如： 一些文件也许会周期性的更改，但是他的内容并不改变(仅仅改变的修改时间)，这个时候我们并不希望客户端认为这个文件被修改了，而重新GET;
-
-请求头
-
-响应头
-
-Via
-
-响应：via
-
-作用：存放路由信息,CDN中常用。
-
-image.png
-
-Content-Length
-
-请求：Content-Length
-
-响应：content-length
-
-值：数字
-
-作用：代表请求体的大小，或者响应体内容的大小。
-
-image.png
-
-Content-Range
-
-请求：Range,
-
-格式Range:(unit=first byte pos)-[last byte pos]
-
-指定第一个字节的位置和最后一个字节的位置，
-
-响应：Content-range，
-
-格式Content-Range: bytes (unit first byte pos) - [last byte pos]/[entity legth]
-
-指定整个实体中的一部分的插入位置，他也指示了整个实体的长度
-
-值如：
-
-Range:bytes=0-801
-
-Content-Range: bytes 0-800/801
 

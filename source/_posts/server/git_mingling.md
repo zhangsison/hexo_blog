@@ -15,8 +15,8 @@ tags: [Git]
 
 ## 查看、添加、提交、删除、找回，重置修改文件 ##
 
-----------
 
+```
 
 git help # 显示command的help
 
@@ -48,10 +48,10 @@ git ci --amend # 修改最后一次提交记录
 git revert <$id> # 恢复某次提交的状态，恢复动作本身也创建次提交对象
 
 git revert HEAD # 恢复最后一次提交的状态
+```
 ## 查看文件diff ##
 
-----------
-
+```
 
 git diff # 比较当前文件和暂存区文件差异 git diff
 
@@ -64,11 +64,12 @@ git diff --staged # 比较暂存区和版本库差异
 git diff --cached # 比较暂存区和版本库差异
 
 git diff --stat # 仅仅比较统计信息
+
+```
+
 ## 查看提交记录 ##
 
-----------
-
-
+```
 git log git log # 查看该文件每次提交记录
 
 git log -p # 查看每次详细修改内容的diff
@@ -82,9 +83,11 @@ tig
 Mac上可以使用tig代替diff和log，brew install tig
 
 Git 本地分支管理
+```
+
 ## 查看、切换、创建和删除分支 ##
 
-----------
+```
 
 
 git br -r # 查看远程分支
@@ -110,9 +113,10 @@ git co $id -b <new_branch> # 把某次历史提交记录checkout出来，创建�
 git br -d # 删除某个分支
 
 git br -D # 强制删除某个分支 (未被合并的分支被删除的时候需要强制)
+```
 ## 分支合并和rebase ##
 
-----------
+```
 
 
 git merge # 将branch分支合并到当前分支
@@ -123,19 +127,16 @@ git rebase master # 将master rebase到branch，相当于： git co &&
 git rebase master && git co master && git merge
 ## Git补丁管理(方便在多台机器上开发同步时用) ##
 
-----------
-
-
 git diff > ../sync.patch # 生成补丁
 
 git apply ../sync.patch # 打补丁
 
 git apply --check ../sync.patch #测试补丁能否成功
+
+```
 ## Git暂存管理 ##
 
-----------
-
-
+```
 git stash # 暂存
 
 git stash list # 列所有stash
@@ -143,10 +144,10 @@ git stash list # 列所有stash
 git stash apply # 恢复暂存的内容
 
 git stash drop # 删除暂存区
+```
 ## Git远程分支管理 ##
 
-----------
-
+```
 
 git pull # 抓取远程仓库所有分支更新并合并到本地
 
@@ -171,10 +172,10 @@ git push origin <local_branch> # 创建远程分支， origin是远程仓库名
 git push origin <local_branch>:<remote_branch> # 创建远程分支
 
 git push origin :<remote_branch> #先删除本地分支(git br -d )，然后再push删除远程分支
-# Git远程仓库管理 #
-## GitHub ##
 
-----------
+```
+# Git远程仓库管理 #
+```
 
 
 git remote -v # 查看远程服务器地址和仓库名称
@@ -184,10 +185,11 @@ git remote show origin # 查看远程服务器仓库状态
 git remote add origin git@ github:robbin/robbin_site.git # 添加远程仓库地址
 
 git remote set-url origin git@ github.com:robbin/robbin_site.git # 设置远程仓库地址(用于修改远程仓库地址) git remote rm # 删除远程仓库
+```
+
 ## 创建远程仓库 ##
 
-----------
-
+```
 
 git clone --bare robbin_site robbin_site.git # 用带版本的项目创建纯版本仓库
 
@@ -208,3 +210,4 @@ git remote set-head origin master # 设置远程仓库的HEAD指向master分支
 git branch --set-upstream master origin/master
 
 git branch --set-upstream develop origin/develop
+```

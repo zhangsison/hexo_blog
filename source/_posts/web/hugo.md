@@ -2,7 +2,6 @@
 
 title: hugo 自动部署 vercel
 date: 2025-05-05
-featuredImage: "/images/web.jpg"
 categories: [web]
 tags: [hugo,vercel]
 
@@ -22,9 +21,7 @@ https://www.qikqiak.com/post/hugo-integrated-algolia-search/
 ```bash
 
 hugo new posts/first_post.md
-
 hugo serve
-
 hugo serve --disableFastRender
 hugo serve -e production
 

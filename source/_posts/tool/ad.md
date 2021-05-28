@@ -1,6 +1,6 @@
 ---
 
-title: ApacheBench 
+title: ApacheBench 测压工具
 date: 2016-09-07
 categories: [tool]
 tags: [ApacheBench , ad]
@@ -8,8 +8,6 @@ tags: [ApacheBench , ad]
 ---
 
 # ApacheBench  #
-
-
 
 输入 ab -n 100 -c 20 http://localhost:8080/（-n发出100个请求，-c模拟20并发，相当100人同时访问，后面是测试url）
 

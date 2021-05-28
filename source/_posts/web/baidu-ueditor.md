@@ -7,12 +7,9 @@ tags: [baidu]
 
 ---
 
+# 百度编辑器
 
-
-
-
-## 百度编辑器
-
+文档 http://fex.baidu.com/ueditor/
 
 
 先打开ueditor.config.js这个文件。找到如下代码：
