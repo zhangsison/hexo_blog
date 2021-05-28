@@ -226,7 +226,7 @@ myProjects:
     工具导航网站:
         icon: fas fa-toolbox
         iconBackground: 'linear-gradient(to bottom right, #29B6F6 0%, #1E88E5 100%)'
-        url: https://github.com/blinkfox/typora-vue-theme
+        url: https://tool.jpdaka.com
         desc: 收集国内外优秀工具、资源网站、创意网站、设计网站 tool.jpdaka.com
 
 # config my skills informations in about page.
