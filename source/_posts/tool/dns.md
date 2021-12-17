@@ -40,7 +40,7 @@ Linux用户
 路由器用户
 进入路由器管理界面，重启路由器即可刷新路由器DNS缓存
 
-
+chrome://net-internals/#dns
 
 
 ## 全国DNS查询 ##

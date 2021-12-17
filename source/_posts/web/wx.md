@@ -11,6 +11,38 @@ tags: [小程序]
 
 # 小程序
 
+Painter：微信小程序生成图片库，绘制一张可以发到朋友圈的图片
+
+html2wxml：用于微信小程序的HTML和Markdown格式的富文本渲染组件，支持代码高亮
+
+
+
+### 小程序video
+
+在video组件上添加 bindtimeupdate 事件 播放进度变化时触发
+
+视频全屏使用swiper组件
+
+```
+<video src="{{src1}}" object-fit="fill" controls="{{false}}" id="video"  loop="true" show-fullscreen-btn='false' autoplay='{{autoplay}}' show-play-btn='false' bindtimeupdate ='bindtimeupdate'></video>
+```
+
+
+
+### scene传多个参数
+
+1、只传一个参数写法
+
+```perl
+scene=hid%3D34//34是参数值 %3D是=符号
+```
+
+2、传2个参数的情况
+
+```perl
+scene=hid%3D34%26pcid%3D1 //%26是&符号，hid和pcid是键名，34和1是键值
+```
+
 
 
 ### 图片等比例
@@ -18,6 +50,12 @@ tags: [小程序]
 ```
 <image src="test.png" mode="widthFix"/>
 ```
+
+
+
+### 小程序公众号文章
+
+注意公众号文章链接里面有？会被截取掉后面的网址，这时候传送页面要使用（encodeURIComponent）和接收页面（decodeURIComponent）解码编译
 
 
 
@@ -103,5 +141,20 @@ let list =jicilist.concat(yi)
         </view>
  
 </scroll-view>
+```
+
+小程序 获取父级index
+
+```js
+
+<view class="social_is" wx:for="{{getCommunityThemeList}}" wx:key="key">
+<view class="comment_box_li" wx:for="{{item.commentList}}" wx:key='key' wx:for-index="index2" wx:for-item="i"
+wx:if="{{index2<5}}">
+<i class="comment_name {{i.isSelf == 1 ? 'islike':''}}">{{i.userName}}：</i>
+<view bindtap="{{i.isSelf == 0 ? 'userReply':'userDelete'}}" data-commentid="{{i.id}}" data-index="{{index}}">
+{{i.content}}
+</view>
+</view>
+</view>
 ```
 
